@@ -1,0 +1,116 @@
+aid: pandascore
+url: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/apis.yml
+name: PandaScore
+kind: company
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Esports
+  - Odds
+  - Betting
+  - Live Data
+  - Stats
+  - Fantasy
+  - WebSocket
+  - REST
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+description: >-
+  PandaScore is a Paris-based esports data and odds provider supplying real-time
+  fixtures, live statistics, historical data, and betting markets across 13+ esports
+  titles including League of Legends, Counter-Strike 2, Dota 2, Valorant, Rainbow
+  Six Siege, Overwatch, Call of Duty, Rocket League, EA Sports FC, King of Glory,
+  Wild Rift, StarCraft, and Mobile Legends Bang Bang. The PandaScore REST API at
+  api.pandascore.co plus WebSocket feeds power fantasy platforms, media outlets,
+  predictive analytics, live score apps, and regulated sportsbooks.
+apis:
+  - aid: pandascore:rest-api
+    name: PandaScore REST API
+    description: >-
+      Unified REST API for esports fixtures, matches, tournaments, leagues,
+      series, teams, players, and historical statistics across all supported
+      videogames. Bearer-token authenticated, paginated, and game-scoped via
+      title-specific routes plus a common /matches surface.
+    humanURL: https://developers.pandascore.co/docs
+    baseURL: https://api.pandascore.co
+    tags:
+      - Esports
+      - Fixtures
+      - Matches
+      - Tournaments
+      - Stats
+      - REST
+    properties:
+      - type: Documentation
+        url: https://developers.pandascore.co/docs
+      - type: APIReference
+        url: https://developers.pandascore.co/reference
+      - type: LLMsTxt
+        url: https://developers.pandascore.co/llms.txt
+      - type: Authentication
+        url: https://developers.pandascore.co/docs/authentication
+        title: Bearer token
+      - type: SignUp
+        url: https://app.pandascore.co/signup
+  - aid: pandascore:odds-api
+    name: PandaScore Odds API
+    description: >-
+      Esports betting odds and markets including pre-match and live odds, player
+      props, BetBuilder, and Kill Maker markets across 308+ unique markets for
+      supported titles. Delivered through the same REST surface and trading-team
+      backed.
+    humanURL: https://pandascore.co/odds
+    baseURL: https://api.pandascore.co
+    tags:
+      - Odds
+      - Betting
+      - Markets
+      - Sportsbook
+    properties:
+      - type: Documentation
+        url: https://developers.pandascore.co/docs
+      - type: ProductPage
+        url: https://pandascore.co/odds
+  - aid: pandascore:live-data-api
+    name: PandaScore Live Data API
+    description: >-
+      Real-time in-game state, frames, and event timelines streamed over
+      WebSocket for supported esports titles. Used for live score apps,
+      live trading, and second-screen experiences.
+    humanURL: https://developers.pandascore.co/docs/live-data
+    baseURL: https://api.pandascore.co
+    tags:
+      - Live Data
+      - WebSocket
+      - Streaming
+      - Frames
+      - Events
+    properties:
+      - type: Documentation
+        url: https://developers.pandascore.co/docs/live-data
+      - type: WebSocket
+        url: wss://live.pandascore.co
+common:
+  - type: Website
+    url: https://pandascore.co/
+  - type: Portal
+    url: https://app.pandascore.co/dashboard/main
+  - type: Documentation
+    url: https://developers.pandascore.co/docs
+  - type: SignUp
+    url: https://app.pandascore.co/signup
+  - type: Blog
+    url: https://pandascore.co/blog
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/pandascore
+  - type: Careers
+    url: https://www.welcometothejungle.com/fr/companies/pandascore
+  - type: TermsOfService
+    url: https://pandascore.co/terms-and-condition
+  - type: PrivacyPolicy
+    url: https://pandascore.co/privacy
+  - type: Contact
+    url: mailto:sales@pandascore.co
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
