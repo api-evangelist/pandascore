@@ -1,0 +1,363 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Matches",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List matches"
+        },
+        {
+          "info": {
+            "name": "List past matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/past"
+          },
+          "docs": "List past matches"
+        },
+        {
+          "info": {
+            "name": "List currently running matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/running"
+          },
+          "docs": "List currently running matches"
+        },
+        {
+          "info": {
+            "name": "List upcoming matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/upcoming"
+          },
+          "docs": "List upcoming matches"
+        },
+        {
+          "info": {
+            "name": "Get a single match by ID or slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/:matchIdOrSlug",
+            "params": [
+              {
+                "name": "matchIdOrSlug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a single match by ID or slug"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Leagues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List leagues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/leagues"
+          },
+          "docs": "List leagues"
+        },
+        {
+          "info": {
+            "name": "Get a single league by ID or slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/leagues/:leagueIdOrSlug",
+            "params": [
+              {
+                "name": "leagueIdOrSlug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a single league by ID or slug"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tournaments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tournaments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/tournaments"
+          },
+          "docs": "List tournaments"
+        },
+        {
+          "info": {
+            "name": "Get a single tournament by ID or slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/tournaments/:tournamentIdOrSlug",
+            "params": [
+              {
+                "name": "tournamentIdOrSlug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a single tournament by ID or slug"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/teams"
+          },
+          "docs": "List teams"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Players",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List players",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/players"
+          },
+          "docs": "List players"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Series",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List series",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/series"
+          },
+          "docs": "List series"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Changes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the latest additions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/additions",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "since",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get the latest additions"
+        },
+        {
+          "info": {
+            "name": "Get the latest updates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/changes"
+          },
+          "docs": "Get the latest updates"
+        },
+        {
+          "info": {
+            "name": "Get the latest updates and additions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/incidents"
+          },
+          "docs": "Get the latest updates and additions"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Game - League of Legends",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List League of Legends matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/lol/matches"
+          },
+          "docs": "List League of Legends matches"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Game - CS:GO",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Counter-Strike matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/csgo/matches"
+          },
+          "docs": "List Counter-Strike matches"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Game - Valorant",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Valorant matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/valorant/matches"
+          },
+          "docs": "List Valorant matches"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Game - Dota 2",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Dota 2 matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/dota2/matches"
+          },
+          "docs": "List Dota 2 matches"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
