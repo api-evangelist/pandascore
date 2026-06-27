@@ -45,12 +45,12 @@ apis:
         url: https://developers.pandascore.co/docs
       - type: APIReference
         url: https://developers.pandascore.co/reference
-      - type: LLMsTxt
+      - type: LlmsText
         url: https://developers.pandascore.co/llms.txt
       - type: Authentication
         url: https://developers.pandascore.co/docs/authentication
         title: Bearer token
-      - type: SignUp
+      - type: Signup
         url: https://app.pandascore.co/signup
   - aid: pandascore:odds-api
     name: PandaScore Odds API
@@ -97,7 +97,7 @@ common:
     url: https://app.pandascore.co/dashboard/main
   - type: Documentation
     url: https://developers.pandascore.co/docs
-  - type: SignUp
+  - type: Signup
     url: https://app.pandascore.co/signup
   - type: Blog
     url: https://pandascore.co/blog
