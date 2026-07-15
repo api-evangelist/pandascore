@@ -91,6 +91,8 @@ apis:
       - type: WebSocket
         url: wss://live.pandascore.co
 common:
+  - type: AgenticAccess
+    url: agentic-access/pandascore-agentic-access.yml
   - type: DomainSecurity
     url: security/pandascore-domain-security.yml
   - type: Authentication
