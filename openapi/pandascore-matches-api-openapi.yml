@@ -1,0 +1,92 @@
+openapi: 3.1.0
+info:
+  title: PandaScore Changes Matches API
+  description: PandaScore provides esports data via a REST API covering matches, leagues, tournaments, teams, players, series and game-specific endpoints for titles like League of Legends, CS:GO, Valorant, and Dota 2. Authentication is via a Bearer token.
+  version: 1.0.0
+  contact:
+    name: PandaScore
+    url: https://developers.pandascore.co/docs
+servers:
+- url: https://api.pandascore.co
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Matches
+paths:
+  /matches:
+    get:
+      tags:
+      - Matches
+      summary: List matches
+      operationId: listMatches
+      parameters:
+      - $ref: '#/components/parameters/Page'
+      - $ref: '#/components/parameters/PerPage'
+      responses:
+        '200':
+          description: A list of matches
+  /matches/past:
+    get:
+      tags:
+      - Matches
+      summary: List past matches
+      operationId: listPastMatches
+      responses:
+        '200':
+          description: A list of past matches
+  /matches/running:
+    get:
+      tags:
+      - Matches
+      summary: List currently running matches
+      operationId: listRunningMatches
+      responses:
+        '200':
+          description: A list of running matches
+  /matches/upcoming:
+    get:
+      tags:
+      - Matches
+      summary: List upcoming matches
+      operationId: listUpcomingMatches
+      responses:
+        '200':
+          description: A list of upcoming matches
+  /matches/{matchIdOrSlug}:
+    get:
+      tags:
+      - Matches
+      summary: Get a single match by ID or slug
+      operationId: getMatch
+      parameters:
+      - in: path
+        name: matchIdOrSlug
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A match
+components:
+  parameters:
+    PerPage:
+      in: query
+      name: per_page
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 50
+    Page:
+      in: query
+      name: page
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token authentication using a PandaScore API token

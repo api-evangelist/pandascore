@@ -1,0 +1,46 @@
+openapi: 3.1.0
+info:
+  title: PandaScore Changes Leagues API
+  description: PandaScore provides esports data via a REST API covering matches, leagues, tournaments, teams, players, series and game-specific endpoints for titles like League of Legends, CS:GO, Valorant, and Dota 2. Authentication is via a Bearer token.
+  version: 1.0.0
+  contact:
+    name: PandaScore
+    url: https://developers.pandascore.co/docs
+servers:
+- url: https://api.pandascore.co
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Leagues
+paths:
+  /leagues:
+    get:
+      tags:
+      - Leagues
+      summary: List leagues
+      operationId: listLeagues
+      responses:
+        '200':
+          description: A list of leagues
+  /leagues/{leagueIdOrSlug}:
+    get:
+      tags:
+      - Leagues
+      summary: Get a single league by ID or slug
+      operationId: getLeague
+      parameters:
+      - in: path
+        name: leagueIdOrSlug
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A league
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token authentication using a PandaScore API token
