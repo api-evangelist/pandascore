@@ -1,0 +1,34 @@
+{
+  "provider": "pandascore",
+  "sources": [
+    "pandascore-changes-api-openapi.yml",
+    "pandascore-game-cs-go-api-openapi.yml",
+    "pandascore-game-dota-2-api-openapi.yml",
+    "pandascore-game-league-of-legends-api-openapi.yml",
+    "pandascore-game-valorant-api-openapi.yml",
+    "pandascore-leagues-api-openapi.yml",
+    "pandascore-matches-api-openapi.yml",
+    "pandascore-players-api-openapi.yml",
+    "pandascore-series-api-openapi.yml",
+    "pandascore-teams-api-openapi.yml",
+    "pandascore-tournaments-api-openapi.yml"
+  ],
+  "outputs": [
+    "pandascore-changes-api-openapi.yml",
+    "pandascore-game-cs-go-api-openapi.yml",
+    "pandascore-game-dota-2-api-openapi.yml",
+    "pandascore-game-league-of-legends-api-openapi.yml",
+    "pandascore-game-valorant-api-openapi.yml",
+    "pandascore-leagues-api-openapi.yml",
+    "pandascore-matches-api-openapi.yml",
+    "pandascore-players-api-openapi.yml",
+    "pandascore-series-api-openapi.yml",
+    "pandascore-teams-api-openapi.yml",
+    "pandascore-tournaments-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

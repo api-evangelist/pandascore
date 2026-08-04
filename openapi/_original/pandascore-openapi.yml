@@ -1,0 +1,254 @@
+openapi: 3.1.0
+info:
+  title: PandaScore API
+  description: >-
+    PandaScore provides esports data via a REST API covering matches, leagues,
+    tournaments, teams, players, series and game-specific endpoints for titles
+    like League of Legends, CS:GO, Valorant, and Dota 2. Authentication is via
+    a Bearer token.
+  version: "1.0.0"
+  contact:
+    name: PandaScore
+    url: https://developers.pandascore.co/docs
+servers:
+  - url: https://api.pandascore.co
+    description: Production
+security:
+  - bearerAuth: []
+tags:
+  - name: Matches
+  - name: Leagues
+  - name: Tournaments
+  - name: Teams
+  - name: Players
+  - name: Series
+  - name: Changes
+  - name: Game - League of Legends
+  - name: Game - CS:GO
+  - name: Game - Valorant
+  - name: Game - Dota 2
+paths:
+  /matches:
+    get:
+      tags: [Matches]
+      summary: List matches
+      operationId: listMatches
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/PerPage'
+      responses:
+        '200':
+          description: A list of matches
+  /matches/past:
+    get:
+      tags: [Matches]
+      summary: List past matches
+      operationId: listPastMatches
+      responses:
+        '200':
+          description: A list of past matches
+  /matches/running:
+    get:
+      tags: [Matches]
+      summary: List currently running matches
+      operationId: listRunningMatches
+      responses:
+        '200':
+          description: A list of running matches
+  /matches/upcoming:
+    get:
+      tags: [Matches]
+      summary: List upcoming matches
+      operationId: listUpcomingMatches
+      responses:
+        '200':
+          description: A list of upcoming matches
+  /matches/{matchIdOrSlug}:
+    get:
+      tags: [Matches]
+      summary: Get a single match by ID or slug
+      operationId: getMatch
+      parameters:
+        - in: path
+          name: matchIdOrSlug
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A match
+  /leagues:
+    get:
+      tags: [Leagues]
+      summary: List leagues
+      operationId: listLeagues
+      responses:
+        '200':
+          description: A list of leagues
+  /leagues/{leagueIdOrSlug}:
+    get:
+      tags: [Leagues]
+      summary: Get a single league by ID or slug
+      operationId: getLeague
+      parameters:
+        - in: path
+          name: leagueIdOrSlug
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A league
+  /tournaments:
+    get:
+      tags: [Tournaments]
+      summary: List tournaments
+      operationId: listTournaments
+      responses:
+        '200':
+          description: A list of tournaments
+  /tournaments/{tournamentIdOrSlug}:
+    get:
+      tags: [Tournaments]
+      summary: Get a single tournament by ID or slug
+      operationId: getTournament
+      parameters:
+        - in: path
+          name: tournamentIdOrSlug
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A tournament
+  /teams:
+    get:
+      tags: [Teams]
+      summary: List teams
+      operationId: listTeams
+      responses:
+        '200':
+          description: A list of teams
+  /players:
+    get:
+      tags: [Players]
+      summary: List players
+      operationId: listPlayers
+      responses:
+        '200':
+          description: A list of players
+  /series:
+    get:
+      tags: [Series]
+      summary: List series
+      operationId: listSeries
+      responses:
+        '200':
+          description: A list of series
+  /additions:
+    get:
+      tags: [Changes]
+      summary: Get the latest additions
+      operationId: getAdditions
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - in: query
+          name: per_page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 50
+        - in: query
+          name: since
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: A list of created entities
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '422':
+          description: Unprocessable Entity
+  /changes:
+    get:
+      tags: [Changes]
+      summary: Get the latest updates
+      operationId: getChanges
+      responses:
+        '200':
+          description: A list of changes
+  /incidents:
+    get:
+      tags: [Changes]
+      summary: Get the latest updates and additions
+      operationId: getIncidents
+      responses:
+        '200':
+          description: A list of incidents
+  /lol/matches:
+    get:
+      tags: [Game - League of Legends]
+      summary: List League of Legends matches
+      operationId: listLolMatches
+      responses:
+        '200':
+          description: A list of LoL matches
+  /csgo/matches:
+    get:
+      tags: [Game - CS:GO]
+      summary: List Counter-Strike matches
+      operationId: listCsgoMatches
+      responses:
+        '200':
+          description: A list of CS:GO matches
+  /valorant/matches:
+    get:
+      tags: [Game - Valorant]
+      summary: List Valorant matches
+      operationId: listValorantMatches
+      responses:
+        '200':
+          description: A list of Valorant matches
+  /dota2/matches:
+    get:
+      tags: [Game - Dota 2]
+      summary: List Dota 2 matches
+      operationId: listDota2Matches
+      responses:
+        '200':
+          description: A list of Dota 2 matches
+components:
+  parameters:
+    Page:
+      in: query
+      name: page
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+    PerPage:
+      in: query
+      name: per_page
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 50
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token authentication using a PandaScore API token
