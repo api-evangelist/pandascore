@@ -98,8 +98,6 @@ apis:
   properties:
   - type: Documentation
     url: https://developers.pandascore.co/docs/live-data
-  - type: WebSocket
-    url: wss://live.pandascore.co
 - aid: pandascore:pandascore-changes-api
   name: PandaScore Changes API
   description: The Changes API from PandaScore — 3 operation(s) for changes.
