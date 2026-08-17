@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore Changes Matches API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Matches",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List matches"
+        },
+        {
+          "info": {
+            "name": "List past matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/past"
+          },
+          "docs": "List past matches"
+        },
+        {
+          "info": {
+            "name": "List currently running matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/running"
+          },
+          "docs": "List currently running matches"
+        },
+        {
+          "info": {
+            "name": "List upcoming matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/upcoming"
+          },
+          "docs": "List upcoming matches"
+        },
+        {
+          "info": {
+            "name": "Get a single match by ID or slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/matches/:matchIdOrSlug",
+            "params": [
+              {
+                "name": "matchIdOrSlug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a single match by ID or slug"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

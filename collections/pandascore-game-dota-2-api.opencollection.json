@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore Changes Game - Dota 2 API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Game - Dota 2",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Dota 2 matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/dota2/matches"
+          },
+          "docs": "List Dota 2 matches"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,189 @@
+{
+  "item": [
+    {
+      "id": "365ec4bb-e0a2-4b04-b0d7-e8a43beda77c",
+      "name": "Tournaments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06a07a02-0ae5-4fdb-acea-6dbe3ef5583e",
+          "name": "List tournaments",
+          "request": {
+            "name": "List tournaments",
+            "description": {},
+            "url": {
+              "path": [
+                "tournaments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8eb6f234-81f3-4964-baec-6042f9616030",
+              "name": "A list of tournaments",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tournaments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c82404f7-6371-4953-9364-f7311495ba0d",
+          "name": "Get a single tournament by ID or slug",
+          "request": {
+            "name": "Get a single tournament by ID or slug",
+            "description": {},
+            "url": {
+              "path": [
+                "tournaments",
+                ":tournamentIdOrSlug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "tournamentIdOrSlug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "010e56a3-7fb5-4ea9-9365-407b94aec9b0",
+              "name": "A tournament",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tournaments",
+                    ":tournamentIdOrSlug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "tournamentIdOrSlug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.pandascore.co",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "495cb16c-b610-486f-a432-077a3ea5056e",
+    "name": "PandaScore Changes Tournaments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "PandaScore provides esports data via a REST API covering matches, leagues, tournaments, teams, players, series and game-specific endpoints for titles like League of Legends, CS:GO, Valorant, and Dota 2. Authentication is via a Bearer token.\n\nContact Support:\n Name: PandaScore",
+      "type": "text/plain"
+    }
+  }
+}

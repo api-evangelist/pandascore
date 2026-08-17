@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore Changes Series API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Series",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List series",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/series"
+          },
+          "docs": "List series"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

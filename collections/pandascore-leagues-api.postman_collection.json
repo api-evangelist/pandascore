@@ -1,0 +1,189 @@
+{
+  "item": [
+    {
+      "id": "afde4ed6-9fa0-4eac-aa11-d76cd9c8acfb",
+      "name": "Leagues",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d2522b5e-efb6-4e45-837f-3013a9a5c1f5",
+          "name": "List leagues",
+          "request": {
+            "name": "List leagues",
+            "description": {},
+            "url": {
+              "path": [
+                "leagues"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0480a643-852f-4c3e-b866-ef064a0d9ef9",
+              "name": "A list of leagues",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leagues"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de4fa933-bc6d-407c-af90-b0bcc235a68e",
+          "name": "Get a single league by ID or slug",
+          "request": {
+            "name": "Get a single league by ID or slug",
+            "description": {},
+            "url": {
+              "path": [
+                "leagues",
+                ":leagueIdOrSlug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "leagueIdOrSlug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2d200949-18c9-4247-964b-dd07af0a9a22",
+              "name": "A league",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leagues",
+                    ":leagueIdOrSlug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "leagueIdOrSlug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.pandascore.co",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "927a3153-b4d5-4e4b-b750-32386be9bd4c",
+    "name": "PandaScore Changes Leagues API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "PandaScore provides esports data via a REST API covering matches, leagues, tournaments, teams, players, series and game-specific endpoints for titles like League of Legends, CS:GO, Valorant, and Dota 2. Authentication is via a Bearer token.\n\nContact Support:\n Name: PandaScore",
+      "type": "text/plain"
+    }
+  }
+}

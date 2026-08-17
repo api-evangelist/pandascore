@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore Changes Game - CS:GO API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Game - CS:GO",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Counter-Strike matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/csgo/matches"
+          },
+          "docs": "List Counter-Strike matches"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

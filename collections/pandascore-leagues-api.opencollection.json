@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore Changes Leagues API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leagues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List leagues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/leagues"
+          },
+          "docs": "List leagues"
+        },
+        {
+          "info": {
+            "name": "Get a single league by ID or slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/leagues/:leagueIdOrSlug",
+            "params": [
+              {
+                "name": "leagueIdOrSlug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a single league by ID or slug"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

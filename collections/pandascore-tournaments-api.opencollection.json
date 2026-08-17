@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore Changes Tournaments API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tournaments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tournaments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/tournaments"
+          },
+          "docs": "List tournaments"
+        },
+        {
+          "info": {
+            "name": "Get a single tournament by ID or slug",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/tournaments/:tournamentIdOrSlug",
+            "params": [
+              {
+                "name": "tournamentIdOrSlug",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a single tournament by ID or slug"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

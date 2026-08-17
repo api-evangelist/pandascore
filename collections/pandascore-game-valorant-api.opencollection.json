@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PandaScore Changes Game - Valorant API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Game - Valorant",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Valorant matches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pandascore.co/valorant/matches"
+          },
+          "docs": "List Valorant matches"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
