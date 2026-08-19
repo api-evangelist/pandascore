@@ -1,0 +1,428 @@
+# PandaScore Developers Documentation
+
+> Build your esports product on top of PandaScore statistics.
+
+## Guides
+- [Getting started](https://developers.pandascore.co/docs/getting-started.md): This page will walk you through everything you need to know to get up and running with the API
+- [Plan reference](https://developers.pandascore.co/docs/plan-reference.md): This page covers all game-specific endpoints for Counter-Strike, League of Legends, Dota 2, and Valorant with the plan required to access each one indicated.
+- [Fundamentals](https://developers.pandascore.co/docs/fundamentals.md): Learn the fundamentals of the opinionated, flexible data structure PandaScore uses to map esports competitions across all video games.
+- [Discord match score-bot](https://developers.pandascore.co/docs/discord-score-bot.md): Follow this guide to create a customised Discord score-bot!
+- [Frequently asked questions](https://developers.pandascore.co/docs/frequently-asked-questions.md): Browse through some of our commonly asked questions to ease your integration.
+- [Overview](https://developers.pandascore.co/docs/websockets-overview.md): Learn how to retrieve and connect to the matches data feed using the WebSockets API.
+- [Counter-Strike](https://developers.pandascore.co/docs/data-sample-csgo.md)
+- [League of Legends](https://developers.pandascore.co/docs/data-sample-league-of-legends.md)
+- [Sandbox environment](https://developers.pandascore.co/docs/sandbox-environment.md): Learn how to use the sandbox environment for LoL and CS
+- [Counter-Strike](https://developers.pandascore.co/docs/counter-strike.md)
+- [Valorant](https://developers.pandascore.co/docs/valorant.md)
+- [Overview](https://developers.pandascore.co/docs/low-latency-feed-overview.md)
+
+## API Reference
+- [List additions](https://developers.pandascore.co/reference/get_additions.md): Get the latest additions.  This endpoint only shows unchanged objects. > ℹ️   >  > This endpoint is available to all customers
+- [List changes](https://developers.pandascore.co/reference/get_changes.md): Get the latest updates.  This endpoint only provides the latest change for an object. It does not keep track of previous changes. > ℹ️   >  > This endpoint is available to all customers
+- [List deletions](https://developers.pandascore.co/reference/get_deletions.md): Get the latest deleted documents > ℹ️   >  > This endpoint is available to all customers
+- [List changes, additions and deletions](https://developers.pandascore.co/reference/get_incidents.md): Get the latest updates and additions.  This endpoint only provides the latest incident for an object. It does not keep track of previous incidents. > ℹ️   >  > This endpoint is available to all customers
+- [List leagues](https://developers.pandascore.co/reference/get_leagues.md): List leagues > ℹ️   >  > This endpoint is available to all customers
+- [Get a league](https://developers.pandascore.co/reference/get_leagues_leagueidorslug.md): Get a single league by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get matches for a league](https://developers.pandascore.co/reference/get_leagues_leagueidorslug_matches.md): List matches of the given league > ℹ️   >  > This endpoint is available to all customers
+- [Get past matches for league](https://developers.pandascore.co/reference/get_leagues_leagueidorslug_matches_past.md): List past matches for the given league > ℹ️   >  > This endpoint is available to all customers
+- [Get running matches for league](https://developers.pandascore.co/reference/get_leagues_leagueidorslug_matches_running.md): List currently running matches for the given league > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming matches for league](https://developers.pandascore.co/reference/get_leagues_leagueidorslug_matches_upcoming.md): List upcoming matches for the given league > ℹ️   >  > This endpoint is available to all customers
+- [List series of a league](https://developers.pandascore.co/reference/get_leagues_leagueidorslug_series.md): List series for the given league > ℹ️   >  > This endpoint is available to all customers
+- [Get tournaments for a league](https://developers.pandascore.co/reference/get_leagues_leagueidorslug_tournaments.md): List tournaments of the given league > ℹ️   >  > This endpoint is available to all customers
+- [List lives matches](https://developers.pandascore.co/reference/get_lives.md): List currently running live matches, available from pandascore with live websocket data. > ℹ️   >  > This endpoint is available to all customers
+- [List matches](https://developers.pandascore.co/reference/get_matches.md): List matches > ℹ️   >  > This endpoint is available to all customers
+- [Get past matches](https://developers.pandascore.co/reference/get_matches_past.md): List past matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running matches](https://developers.pandascore.co/reference/get_matches_running.md): List currently running matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming matches](https://developers.pandascore.co/reference/get_matches_upcoming.md): List upcoming matches > ℹ️   >  > This endpoint is available to all customers
+- [Get a match](https://developers.pandascore.co/reference/get_matches_matchidorslug.md): Get a single match by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get match's opponents](https://developers.pandascore.co/reference/get_matches_matchidorslug_opponents.md): List opponents (player or teams) for the given match > ℹ️   >  > This endpoint is available to all customers
+- [List players](https://developers.pandascore.co/reference/get_players.md): List players > ℹ️   >  > This endpoint is available to all customers
+- [Get a player](https://developers.pandascore.co/reference/get_players_playeridorslug.md): Get a single player by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get leagues for a player](https://developers.pandascore.co/reference/get_players_playeridorslug_leagues.md): List leagues for the given player. Only leagues from the player's current videogame. > ℹ️   >  > This endpoint is available to all customers
+- [Get matches for a player](https://developers.pandascore.co/reference/get_players_playeridorslug_matches.md): List matches for the given player. Only matches from the player's current videogame. > ℹ️   >  > This endpoint is available to all customers
+- [Get series for a player](https://developers.pandascore.co/reference/get_players_playeridorslug_series.md): List series for the given player. Only series from the player's current videogame. > ℹ️   >  > This endpoint is available to all customers
+- [Get tournaments for a player](https://developers.pandascore.co/reference/get_players_playeridorslug_tournaments.md): List tournaments for the given player. Only tournaments from the player's current videogame. > ℹ️   >  > This endpoint is available to all customers
+- [List series](https://developers.pandascore.co/reference/get_series.md): List series > ℹ️   >  > This endpoint is available to all customers
+- [Get past series](https://developers.pandascore.co/reference/get_series_past.md): List past series > ℹ️   >  > This endpoint is available to all customers
+- [Get running series](https://developers.pandascore.co/reference/get_series_running.md): List currently running series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming series](https://developers.pandascore.co/reference/get_series_upcoming.md): List upcoming series > ℹ️   >  > This endpoint is available to all customers
+- [Get a serie](https://developers.pandascore.co/reference/get_series_serieidorslug.md): Get a single serie by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get matches for a serie](https://developers.pandascore.co/reference/get_series_serieidorslug_matches.md): List matches of the given serie > ℹ️   >  > This endpoint is available to all customers
+- [Get past matches for serie](https://developers.pandascore.co/reference/get_series_serieidorslug_matches_past.md): List past matches for the given serie > ℹ️   >  > This endpoint is available to all customers
+- [Get running matches for serie](https://developers.pandascore.co/reference/get_series_serieidorslug_matches_running.md): List currently running matches for the given serie > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming matches for serie](https://developers.pandascore.co/reference/get_series_serieidorslug_matches_upcoming.md): List upcoming matches for the given serie > ℹ️   >  > This endpoint is available to all customers
+- [Get tournaments for a serie](https://developers.pandascore.co/reference/get_series_serieidorslug_tournaments.md): List tournaments of the given serie > ℹ️   >  > This endpoint is available to all customers
+- [List teams](https://developers.pandascore.co/reference/get_teams.md): List teams > ℹ️   >  > This endpoint is available to all customers
+- [Get a team](https://developers.pandascore.co/reference/get_teams_teamidorslug.md): Get a single team by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get leagues for a team](https://developers.pandascore.co/reference/get_teams_teamidorslug_leagues.md): List leagues in which the given team was part of > ℹ️   >  > This endpoint is available to all customers
+- [Get matches for team](https://developers.pandascore.co/reference/get_teams_teamidorslug_matches.md): List matches for the given team > ℹ️   >  > This endpoint is available to all customers
+- [Get series for a team](https://developers.pandascore.co/reference/get_teams_teamidorslug_series.md): List series in which the given team was part of > ℹ️   >  > This endpoint is available to all customers
+- [Get tournaments for a team](https://developers.pandascore.co/reference/get_teams_teamidorslug_tournaments.md): List tournaments in which the given team was part of > ℹ️   >  > This endpoint is available to all customers
+- [List tournaments](https://developers.pandascore.co/reference/get_tournaments.md): List tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get past tournaments](https://developers.pandascore.co/reference/get_tournaments_past.md): List past tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running tournaments](https://developers.pandascore.co/reference/get_tournaments_running.md): List currently running tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming tournaments](https://developers.pandascore.co/reference/get_tournaments_upcoming.md): List upcoming tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get a tournament](https://developers.pandascore.co/reference/get_tournaments_tournamentidorslug.md): Get a single tournament by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get a tournament's brackets](https://developers.pandascore.co/reference/get_tournaments_tournamentidorslug_brackets.md): Get the brackets of the given tournament > ℹ️   >  > This endpoint is available to all customers
+- [Get matches for tournament](https://developers.pandascore.co/reference/get_tournaments_tournamentidorslug_matches.md): List matches for the given tournament > ℹ️   >  > This endpoint is available to all customers
+- [Get rosters for a tournament](https://developers.pandascore.co/reference/get_tournaments_tournamentidorslug_rosters.md): List participants (player or team) for a given tournament. > ℹ️   >  > This endpoint is available to all customers
+- [Get tournament standings](https://developers.pandascore.co/reference/get_tournaments_tournamentidorslug_standings.md): Get the current standings for a given tournament > ℹ️   >  > This endpoint is available to all customers
+- [Get teams for a tournament](https://developers.pandascore.co/reference/get_tournaments_tournamentidorslug_teams.md): List teams for the given tournament > ℹ️   >  > This endpoint is available to all customers
+- [List videogames](https://developers.pandascore.co/reference/get_videogames.md): List videogames > ℹ️   >  > This endpoint is available to all customers
+- [Get a videogame](https://developers.pandascore.co/reference/get_videogames_videogameidorslug.md): Get a single videogame by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [List leagues for a videogame](https://developers.pandascore.co/reference/get_videogames_videogameidorslug_leagues.md): List leagues for a given videogame > ℹ️   >  > This endpoint is available to all customers
+- [List series for a videogame](https://developers.pandascore.co/reference/get_videogames_videogameidorslug_series.md): List series for the given videogame > ℹ️   >  > This endpoint is available to all customers
+- [List videogame titles](https://developers.pandascore.co/reference/get_videogames_videogameidorslug_titles.md): List available titles for a given videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get tournaments for a videogame](https://developers.pandascore.co/reference/get_videogames_videogameidorslug_tournaments.md): List tournaments of the given videogame > ℹ️   >  > This endpoint is available to all customers
+- [List videogame versions](https://developers.pandascore.co/reference/get_videogames_videogameidorslug_versions.md): List available versions for a given videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get CODMW leagues](https://developers.pandascore.co/reference/get_codmw_leagues.md): List CODMW leagues > ℹ️   >  > This endpoint is available to all customers
+- [List CODMW matches](https://developers.pandascore.co/reference/get_codmw_matches.md): List matches for the COD MW videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past CODMW matches](https://developers.pandascore.co/reference/get_codmw_matches_past.md): List past CODMW matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running CODMW matches](https://developers.pandascore.co/reference/get_codmw_matches_running.md): List running CODMW matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming CODMW matches](https://developers.pandascore.co/reference/get_codmw_matches_upcoming.md): List upcoming CODMW matches > ℹ️   >  > This endpoint is available to all customers
+- [List CODMW players](https://developers.pandascore.co/reference/get_codmw_players.md): List players for the CODMW videogame > ℹ️   >  > This endpoint is available to all customers
+- [List CODMW series](https://developers.pandascore.co/reference/get_codmw_series.md): List series for the CODMW videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past CODMW series](https://developers.pandascore.co/reference/get_codmw_series_past.md): List past CODMW series > ℹ️   >  > This endpoint is available to all customers
+- [Get running CODMW series](https://developers.pandascore.co/reference/get_codmw_series_running.md): List running CODMW series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming CODMW series](https://developers.pandascore.co/reference/get_codmw_series_upcoming.md): List upcoming CODMW series > ℹ️   >  > This endpoint is available to all customers
+- [List CODMW teams](https://developers.pandascore.co/reference/get_codmw_teams.md): List teams for the CODMW videogame > ℹ️   >  > This endpoint is available to all customers
+- [List CODMW tournaments](https://developers.pandascore.co/reference/get_codmw_tournaments.md): List tournaments for the CODMW videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past CODMW tournaments](https://developers.pandascore.co/reference/get_codmw_tournaments_past.md): List past CODMW tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running CODMW tournaments](https://developers.pandascore.co/reference/get_codmw_tournaments_running.md): List running CODMW tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming CODMW tournaments](https://developers.pandascore.co/reference/get_codmw_tournaments_upcoming.md): List upcoming CODMW tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get a game](https://developers.pandascore.co/reference/get_csgo_games_csgogameid-1.md): Get a single Counter-Strike game by ID > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List Play-by-Play events for a given game](https://developers.pandascore.co/reference/get_csgo_games_csgogameid_events-1.md): List events for a given Counter-Strike game > ℹ️   >  > This endpoint is only available to customers with the real-time data **pro** plan
+- [List rounds in a Counter-Strike game](https://developers.pandascore.co/reference/get_csgo_games_csgogameid_rounds-1.md): List rounds in a Counter-Strike game > ℹ️   >  > This endpoint is only available to customers with a real-time data plan
+- [List games for a given match](https://developers.pandascore.co/reference/get_csgo_matches_matchidorslug_games-1.md): List games for a given Counter-Strike match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get Counter-Strike leagues](https://developers.pandascore.co/reference/get_csgo_leagues-1.md): List Counter-Strike leagues > ℹ️   >  > This endpoint is available to all customers
+- [List maps](https://developers.pandascore.co/reference/get_csgo_maps-1.md): List maps > ℹ️   >  > This endpoint is available to all customers
+- [Get a map](https://developers.pandascore.co/reference/get_csgo_maps_csgomapid-1.md): Get a single map by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [List Counter-Strike matches](https://developers.pandascore.co/reference/get_csgo_matches-1.md): List matches for the Counter-Strike videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Counter-Strike matches](https://developers.pandascore.co/reference/get_csgo_matches_past-1.md): List past Counter-Strike matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running Counter-Strike matches](https://developers.pandascore.co/reference/get_csgo_matches_running-1.md): List running Counter-Strike matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Counter-Strike matches](https://developers.pandascore.co/reference/get_csgo_matches_upcoming-1.md): List upcoming Counter-Strike matches > ℹ️   >  > This endpoint is available to all customers
+- [Get a Counter-Strike match](https://developers.pandascore.co/reference/get_csgo_matches_matchidorslug-1.md): Get a single Counter-Strike match by ID or slug > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike players on match](https://developers.pandascore.co/reference/get_csgo_matches_matchidorslug_players_stats-1.md): Get detailed statistics of Counter-Strike players for the given match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike player on match](https://developers.pandascore.co/reference/get_csgo_matches_matchidorslug_players_playeridorslug_stats-1.md): Get detailed statistics of a given Counter-Strike player for the given match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike team on match](https://developers.pandascore.co/reference/get_csgo_matches_matchidorslug_teams_teamidorslug_stats-1.md): Get detailed statistics of a given Counter-Strike team for the given match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike player](https://developers.pandascore.co/reference/get_csgo_players_playeridorslug_stats-1.md): Get detailed statistics of a given Counter-Strike player > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike player on serie](https://developers.pandascore.co/reference/get_csgo_series_serieidorslug_players_playeridorslug_stats-1.md): Get detailed statistics of a given Counter-Strike player for the given serie > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike team on serie](https://developers.pandascore.co/reference/get_csgo_series_serieidorslug_teams_teamidorslug_stats-1.md): Get detailed statistics of a given Counter-Strike team for the given serie > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike team](https://developers.pandascore.co/reference/get_csgo_teams_teamidorslug_stats-1.md): Get detailed statistics of a given Counter-Strike team > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike player on tournament](https://developers.pandascore.co/reference/get_csgo_tournaments_tournamentidorslug_players_playeridorslug_stats-1.md): Get detailed statistics of a given Counter-Strike player for the given tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Counter-Strike team on tournament](https://developers.pandascore.co/reference/get_csgo_tournaments_tournamentidorslug_teams_teamidorslug_stats-1.md): Get detailed statistics of a given Counter-Strike team for the given tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List Counter-Strike players](https://developers.pandascore.co/reference/get_csgo_players-1.md): List players for the Counter-Strike videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Counter-Strike series](https://developers.pandascore.co/reference/get_csgo_series-1.md): List series for the Counter-Strike videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Counter-Strike series](https://developers.pandascore.co/reference/get_csgo_series_past-1.md): List past Counter-Strike series > ℹ️   >  > This endpoint is available to all customers
+- [Get running Counter-Strike series](https://developers.pandascore.co/reference/get_csgo_series_running-1.md): List running Counter-Strike series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Counter-Strike series](https://developers.pandascore.co/reference/get_csgo_series_upcoming-1.md): List upcoming Counter-Strike series > ℹ️   >  > This endpoint is available to all customers
+- [List Counter-Strike teams](https://developers.pandascore.co/reference/get_csgo_teams-1.md): List teams for the Counter-Strike videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Counter-Strike tournaments](https://developers.pandascore.co/reference/get_csgo_tournaments-1.md): List tournaments for the Counter-Strike videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Counter-Strike tournaments](https://developers.pandascore.co/reference/get_csgo_tournaments_past-1.md): List past Counter-Strike tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running Counter-Strike tournaments](https://developers.pandascore.co/reference/get_csgo_tournaments_running-1.md): List running Counter-Strike tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Counter-Strike tournaments](https://developers.pandascore.co/reference/get_csgo_tournaments_upcoming-1.md): List upcoming Counter-Strike tournaments > ℹ️   >  > This endpoint is available to all customers
+- [List weapons](https://developers.pandascore.co/reference/get_csgo_weapons-1.md): List weapons > ℹ️   >  > This endpoint is available to all customers
+- [Get a weapon](https://developers.pandascore.co/reference/get_csgo_weapons_csgoweaponidorslug-1.md): Get a single weapon by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [List abilities](https://developers.pandascore.co/reference/get_dota2_abilities.md): List abilities > ℹ️   >  > This endpoint is available to all customers
+- [Get an ability](https://developers.pandascore.co/reference/get_dota2_abilities_dota2abilityidorslug.md): Get a single ability by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get a game](https://developers.pandascore.co/reference/get_dota2_games_dota2gameid.md): Get a single Dota 2 game by ID > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List frames for a given game](https://developers.pandascore.co/reference/get_dota2_games_dota2gameid_frames.md): List frames for a given Dota 2 game > ℹ️   >  > This endpoint is only available to customers with a real-time data plan
+- [List games for a given match](https://developers.pandascore.co/reference/get_dota2_matches_matchidorslug_games.md): List games for a given Dota 2 match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List finished games for a given team](https://developers.pandascore.co/reference/get_dota2_teams_teamidorslug_games.md): List finished games for a given Dota 2 team > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List heroes](https://developers.pandascore.co/reference/get_dota2_heroes.md): List heroes > ℹ️   >  > This endpoint is available to all customers
+- [Get an hero](https://developers.pandascore.co/reference/get_dota2_heroes_dota2heroidorslug.md): Get a single hero by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [List items](https://developers.pandascore.co/reference/get_dota2_items.md): List items > ℹ️   >  > This endpoint is available to all customers
+- [Get an item](https://developers.pandascore.co/reference/get_dota2_items_dota2itemidorslug.md): Get a single item by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get Dota 2 leagues](https://developers.pandascore.co/reference/get_dota2_leagues.md): List Dota2 leagues > ℹ️   >  > This endpoint is available to all customers
+- [List Dota 2 matches](https://developers.pandascore.co/reference/get_dota2_matches.md): List matches for the Dota 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Dota 2 matches](https://developers.pandascore.co/reference/get_dota2_matches_past.md): List past Dota 2 matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running Dota 2 matches](https://developers.pandascore.co/reference/get_dota2_matches_running.md): List running Dota 2 matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Dota 2 matches](https://developers.pandascore.co/reference/get_dota2_matches_upcoming.md): List upcoming Dota 2 matches > ℹ️   >  > This endpoint is available to all customers
+- [Get stats for Dota2 players on match](https://developers.pandascore.co/reference/get_dota2_matches_matchidorslug_players_stats.md): Get detailed statistics of Dota2 players for the given match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Dota2 player](https://developers.pandascore.co/reference/get_dota2_players_playeridorslug_stats.md): Get detailed statistics of a given Dota2 player > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Dota2 player on serie](https://developers.pandascore.co/reference/get_dota2_series_serieidorslug_players_playeridorslug_stats.md): Get detailed statistics of a given Dota2 player for the given serie > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Dota2 team on serie](https://developers.pandascore.co/reference/get_dota2_series_serieidorslug_teams_teamidorslug_stats.md): Get detailed statistics of a given Dota2 team for the given serie > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Dota2 team](https://developers.pandascore.co/reference/get_dota2_teams_teamidorslug_stats.md): Get detailed statistics of a given Dota2 team > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Dota2 player on tournament](https://developers.pandascore.co/reference/get_dota2_tournaments_tournamentidorslug_players_playeridorslug_stats.md): Get detailed statistics of a given Dota2 player for the given tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for Dota2 team on tournament](https://developers.pandascore.co/reference/get_dota2_tournaments_tournamentidorslug_teams_teamidorslug_stats.md): Get detailed statistics of a given Dota2 team for the given tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List Dota 2 players](https://developers.pandascore.co/reference/get_dota2_players.md): List players for the Dota 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Dota 2 series](https://developers.pandascore.co/reference/get_dota2_series.md): List series for the Dota 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Dota 2 series](https://developers.pandascore.co/reference/get_dota2_series_past.md): List past Dota 2 series > ℹ️   >  > This endpoint is available to all customers
+- [Get running Dota 2 series](https://developers.pandascore.co/reference/get_dota2_series_running.md): List running Dota 2 series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Dota 2 series](https://developers.pandascore.co/reference/get_dota2_series_upcoming.md): List upcoming Dota 2 series > ℹ️   >  > This endpoint is available to all customers
+- [List Dota 2 teams for a serie](https://developers.pandascore.co/reference/get_dota2_series_serieidorslug_teams.md): List teams for the Dota 2 videogame for a given serie > ℹ️   >  > This endpoint is available to all customers
+- [List Dota 2 teams](https://developers.pandascore.co/reference/get_dota2_teams.md): List teams for the Dota 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Dota 2 tournaments](https://developers.pandascore.co/reference/get_dota2_tournaments.md): List tournaments for the Dota 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Dota 2 tournaments](https://developers.pandascore.co/reference/get_dota2_tournaments_past.md): List past Dota 2 tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running Dota 2 tournaments](https://developers.pandascore.co/reference/get_dota2_tournaments_running.md): List running Dota 2 tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Dota 2 tournaments](https://developers.pandascore.co/reference/get_dota2_tournaments_upcoming.md): List upcoming Dota 2 tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get EA Sports FC leagues](https://developers.pandascore.co/reference/get_fifa_leagues.md): List EA Sports FC leagues > ℹ️   >  > This endpoint is available to all customers
+- [List EA Sports FC matches](https://developers.pandascore.co/reference/get_fifa_matches.md): List matches for the EA Sports FC videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past EA Sports FC matches](https://developers.pandascore.co/reference/get_fifa_matches_past.md): List past EA Sports FC matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running EA Sports FC matches](https://developers.pandascore.co/reference/get_fifa_matches_running.md): List running EA Sports FC matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming EA Sports FC matches](https://developers.pandascore.co/reference/get_fifa_matches_upcoming.md): List upcoming EA Sports FC matches > ℹ️   >  > This endpoint is available to all customers
+- [List EA Sports FC players](https://developers.pandascore.co/reference/get_fifa_players.md): List players for the EA Sports FC videogame > ℹ️   >  > This endpoint is available to all customers
+- [List EA Sports FC series](https://developers.pandascore.co/reference/get_fifa_series.md): List series for the EA Sports FC videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past EA Sports FC series](https://developers.pandascore.co/reference/get_fifa_series_past.md): List past EA Sports FC series > ℹ️   >  > This endpoint is available to all customers
+- [Get running EA Sports FC series](https://developers.pandascore.co/reference/get_fifa_series_running.md): List running EA Sports FC series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming EA Sports FC series](https://developers.pandascore.co/reference/get_fifa_series_upcoming.md): List upcoming EA Sports FC series > ℹ️   >  > This endpoint is available to all customers
+- [List EA Sports FC teams](https://developers.pandascore.co/reference/get_fifa_teams.md): List teams for the EA Sports FC videogame > ℹ️   >  > This endpoint is available to all customers
+- [List EA Sports FC tournaments](https://developers.pandascore.co/reference/get_fifa_tournaments.md): List tournaments for the EA Sports FC videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past EA Sports FC tournaments](https://developers.pandascore.co/reference/get_fifa_tournaments_past.md): List past EA Sports FC tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running EA Sports FC tournaments](https://developers.pandascore.co/reference/get_fifa_tournaments_running.md): List running EA Sports FC tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming EA Sports FC tournaments](https://developers.pandascore.co/reference/get_fifa_tournaments_upcoming.md): List upcoming EA Sports FC tournaments > ℹ️   >  > This endpoint is available to all customers
+- [List champions](https://developers.pandascore.co/reference/get_lol_champions.md): List champions > ℹ️   >  > This endpoint is available to all customers
+- [Get a champion](https://developers.pandascore.co/reference/get_lol_champions_lolchampionid.md): Get a single champion by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [List champions for all version](https://developers.pandascore.co/reference/get_lol_versions_all_champions.md): Deprecated. Equivalent route: [/lol/champions?filter[videogame_version]=all](/reference/get_lol_champions) > ℹ️   >  > This endpoint is available to all customers
+- [List champions for version](https://developers.pandascore.co/reference/get_lol_versions_lolversionname_champions.md): Deprecated. Equivalent route: [/lol/champions?filter[videogame_version]={lol_version_name}](/reference/get_lol_champions) > ℹ️   >  > This endpoint is available to all customers
+- [Get a game](https://developers.pandascore.co/reference/get_lol_games_lolgameid.md): Get a single League of Legends game by ID > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List Play-by-Play events for a given game](https://developers.pandascore.co/reference/get_lol_games_lolgameid_events.md): List events for a given League of Legends game > ℹ️   >  > This endpoint is only available to customers with a real-time data plan
+- [List Play-by-Play frames for a given game](https://developers.pandascore.co/reference/get_lol_games_lolgameid_frames.md): List frames for a given League of Legends game > ℹ️   >  > This endpoint is only available to customers with a real-time data plan
+- [List games for a given match](https://developers.pandascore.co/reference/get_lol_matches_matchidorslug_games.md): List games for a given League of Legends match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List finished games for a given team](https://developers.pandascore.co/reference/get_lol_teams_teamidorslug_games.md): List finished games for a given League of Legends team > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List items](https://developers.pandascore.co/reference/get_lol_items.md): List items > ℹ️   >  > This endpoint is available to all customers
+- [Get an item](https://developers.pandascore.co/reference/get_lol_items_lolitemid.md): Get a single item by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [List items for all version](https://developers.pandascore.co/reference/get_lol_versions_all_items.md): Deprecated. Equivalent route: [/lol/items?filter[videogame_version]=all](/reference/get_lol_items) > ℹ️   >  > This endpoint is available to all customers
+- [List items for version](https://developers.pandascore.co/reference/get_lol_versions_lolversionname_items.md): Deprecated. Equivalent route: [/lol/items?filter[videogame_version]={lol_version_name}](/reference/get_lol_items) > ℹ️   >  > This endpoint is available to all customers
+- [Get LoL leagues](https://developers.pandascore.co/reference/get_lol_leagues.md): List League of Legends leagues > ℹ️   >  > This endpoint is available to all customers
+- [List masteries](https://developers.pandascore.co/reference/get_lol_masteries.md): List masteries > ℹ️   >  > This endpoint is available to all customers
+- [Get a mastery](https://developers.pandascore.co/reference/get_lol_masteries_lolmasteryid.md): Get a single mastery by ID > ℹ️   >  > This endpoint is available to all customers
+- [List LoL matches](https://developers.pandascore.co/reference/get_lol_matches.md): List matches for the League of Legends videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past LoL matches](https://developers.pandascore.co/reference/get_lol_matches_past.md): List past League of Legends matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running LoL matches](https://developers.pandascore.co/reference/get_lol_matches_running.md): List running League of Legends matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming LoL matches](https://developers.pandascore.co/reference/get_lol_matches_upcoming.md): List upcoming League of Legends matches > ℹ️   >  > This endpoint is available to all customers
+- [Get a LoL match](https://developers.pandascore.co/reference/get_lol_matches_matchidorslug.md): Get a single League of Legends match by ID or slug > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL players on match](https://developers.pandascore.co/reference/get_lol_matches_matchidorslug_players_stats.md): Get detailed statistics of League-of-Legends players for the given match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL player](https://developers.pandascore.co/reference/get_lol_players_playeridorslug_stats.md): Get detailed statistics of a given League-of-Legends player > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL player on serie](https://developers.pandascore.co/reference/get_lol_series_serieidorslug_players_playeridorslug_stats.md): Get detailed statistics of a given League-of-Legends player for the given serie > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL teams on serie](https://developers.pandascore.co/reference/get_lol_series_serieidorslug_teams_stats.md): Get detailed statistics of the LoL teams for the given series > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL team on serie](https://developers.pandascore.co/reference/get_lol_series_serieidorslug_teams_teamidorslug_stats.md): Get detailed statistics of a given League-of-Legends team for the given serie > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL team](https://developers.pandascore.co/reference/get_lol_teams_teamidorslug_stats.md): Get detailed statistics of a given League-of-Legends team > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL player on tournament](https://developers.pandascore.co/reference/get_lol_tournaments_tournamentidorslug_players_playeridorslug_stats.md): Get detailed statistics of a given League-of-Legends player for the given tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for LoL team on tournament](https://developers.pandascore.co/reference/get_lol_tournaments_tournamentidorslug_teams_teamidorslug_stats.md): Get detailed statistics of a given League-of-Legends team for the given tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List LoL players](https://developers.pandascore.co/reference/get_lol_players.md): List players for the League of Legends videogame > ℹ️   >  > This endpoint is available to all customers
+- [List runes](https://developers.pandascore.co/reference/get_lol_runes.md): List runes > ℹ️   >  > This endpoint is available to all customers
+- [List LoL runes](https://developers.pandascore.co/reference/get_lol_runes-reforged.md): List the latest version of League of Legends (reforged) runes > ℹ️   >  > This endpoint is available to all customers
+- [List rune paths](https://developers.pandascore.co/reference/get_lol_runes-reforged-paths.md): List the latest version of League of Legends (reforged) rune paths > ℹ️   >  > This endpoint is available to all customers
+- [Get a LoL rune path](https://developers.pandascore.co/reference/get_lol_runes-reforged-paths_lolrunepathid.md): Retrieve the latest version of a League of Legends (reforged) rune path by its ID > ℹ️   >  > This endpoint is available to all customers
+- [Get a LoL rune](https://developers.pandascore.co/reference/get_lol_runes-reforged_lolrunereforgedid.md): Retrieve the latest version of a League of Legends (reforged) rune by its ID > ℹ️   >  > This endpoint is available to all customers
+- [Get a rune](https://developers.pandascore.co/reference/get_lol_runes_lolruneid.md): Get a single rune by ID > ℹ️   >  > This endpoint is available to all customers
+- [List LoL series](https://developers.pandascore.co/reference/get_lol_series.md): List series for the League of Legends videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past LoL series](https://developers.pandascore.co/reference/get_lol_series_past.md): List past League of Legends series > ℹ️   >  > This endpoint is available to all customers
+- [Get running LoL series](https://developers.pandascore.co/reference/get_lol_series_running.md): List running League of Legends series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming LoL series](https://developers.pandascore.co/reference/get_lol_series_upcoming.md): List upcoming League of Legends series > ℹ️   >  > This endpoint is available to all customers
+- [List LoL teams for a serie](https://developers.pandascore.co/reference/get_lol_series_serieidorslug_teams.md): List teams for the League of Legends videogame for a given serie > ℹ️   >  > This endpoint is available to all customers
+- [List LoL teams](https://developers.pandascore.co/reference/get_lol_teams.md): List teams for the League of Legends videogame > ℹ️   >  > This endpoint is available to all customers
+- [List spells](https://developers.pandascore.co/reference/get_lol_spells.md): List spells > ℹ️   >  > This endpoint is available to all customers
+- [Get a spell](https://developers.pandascore.co/reference/get_lol_spells_lolspellid.md): Get a single spell by ID > ℹ️   >  > This endpoint is available to all customers
+- [List LoL tournaments](https://developers.pandascore.co/reference/get_lol_tournaments.md): List tournaments for the League of Legends videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past LoL tournaments](https://developers.pandascore.co/reference/get_lol_tournaments_past.md): List past League of Legends tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running LoL tournaments](https://developers.pandascore.co/reference/get_lol_tournaments_running.md): List running League of Legends tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming LoL tournaments](https://developers.pandascore.co/reference/get_lol_tournaments_upcoming.md): List upcoming League of Legends tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get LoL Wild Rift leagues](https://developers.pandascore.co/reference/get_lol-wild-rift_leagues.md): List LoL Wild Rift leagues > ℹ️   >  > This endpoint is available to all customers
+- [List LoL Wild Rift matches](https://developers.pandascore.co/reference/get_lol-wild-rift_matches.md): List matches for the LoL Wild Rift videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past LoL Wild Rift matches](https://developers.pandascore.co/reference/get_lol-wild-rift_matches_past.md): List past LoL Wild Rift matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running LoL Wild Rift matches](https://developers.pandascore.co/reference/get_lol-wild-rift_matches_running.md): List running LoL Wild Rift matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming LoL Wild Rift matches](https://developers.pandascore.co/reference/get_lol-wild-rift_matches_upcoming.md): List upcoming LoL Wild Rift matches > ℹ️   >  > This endpoint is available to all customers
+- [List LoL Wild Rift players](https://developers.pandascore.co/reference/get_lol-wild-rift_players.md): List players for the LoL Wild Rift videogame > ℹ️   >  > This endpoint is available to all customers
+- [List LoL Wild Rift series](https://developers.pandascore.co/reference/get_lol-wild-rift_series.md): List series for the  LoL Wild Rift videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past LoL Wild Rift series](https://developers.pandascore.co/reference/get_lol-wild-rift_series_past.md): List past LoL Wild Rift series > ℹ️   >  > This endpoint is available to all customers
+- [Get running LoL Wild Rift series](https://developers.pandascore.co/reference/get_lol-wild-rift_series_running.md): List running LoL Wild Rift series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming LoL Wild Rift series](https://developers.pandascore.co/reference/get_lol-wild-rift_series_upcoming.md): List upcoming LoL Wild Rift series > ℹ️   >  > This endpoint is available to all customers
+- [List LoL Wild Rift teams](https://developers.pandascore.co/reference/get_lol-wild-rift_teams.md): List teams for the LoL Wild Rift videogame > ℹ️   >  > This endpoint is available to all customers
+- [List LoL Wild Rift tournaments](https://developers.pandascore.co/reference/get_lol-wild-rift_tournaments.md): List tournaments for the LoL Wild Rift videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past LoL Wild Rift tournaments](https://developers.pandascore.co/reference/get_lol-wild-rift_tournaments_past.md): List past LoL Wild Rift tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running LoL Wild Rift tournaments](https://developers.pandascore.co/reference/get_lol-wild-rift_tournaments_running.md): List running LoL Wild Rift tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming LoL Wild Rift tournaments](https://developers.pandascore.co/reference/get_lol-wild-rift_tournaments_upcoming.md): List upcoming LoL Wild Rift tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get ML:BB Leagues](https://developers.pandascore.co/reference/get_mlbb_leagues.md): List Mobile Legends: Bang Bang leagues > ℹ️   >  > This endpoint is available to all customers
+- [List ML:BB matches](https://developers.pandascore.co/reference/get_mlbb_matches.md): List matches for the Mobile Legends: Bang Bang videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past ML:BB matches](https://developers.pandascore.co/reference/get_mlbb_matches_past.md): List past Mobile Legends: Bang Bang matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running ML:BB matches](https://developers.pandascore.co/reference/get_mlbb_matches_running.md): List running Mobile Legends: Bang Bang matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming ML:BB matches](https://developers.pandascore.co/reference/get_mlbb_matches_upcoming.md): List upcoming Mobile Legends: Bang Bang matches > ℹ️   >  > This endpoint is available to all customers
+- [List ML:BB players](https://developers.pandascore.co/reference/get_mlbb_players.md): List players for the Mobile Legends: Bang Bang videogame > ℹ️   >  > This endpoint is available to all customers
+- [List ML:BB series](https://developers.pandascore.co/reference/get_mlbb_series.md): List series for the Mobile Legends: Bang Bang videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past ML:BB series](https://developers.pandascore.co/reference/get_mlbb_series_past.md): List past Mobile Legends: Bang Bang series > ℹ️   >  > This endpoint is available to all customers
+- [Get running ML:BB series](https://developers.pandascore.co/reference/get_mlbb_series_running.md): List running Mobile Legends: Bang Bang series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming ML:BB series](https://developers.pandascore.co/reference/get_mlbb_series_upcoming.md): List upcoming Mobile Legends: Bang Bang series > ℹ️   >  > This endpoint is available to all customers
+- [List ML:BB teams](https://developers.pandascore.co/reference/get_mlbb_teams.md): List teams for the Mobile Legends: Bang Bang videogame > ℹ️   >  > This endpoint is available to all customers
+- [List ML:BB tournaments](https://developers.pandascore.co/reference/get_mlbb_tournaments.md): List tournaments for the Mobile Legends: Bang Bang videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past ML:BB tournaments](https://developers.pandascore.co/reference/get_mlbb_tournaments_past.md): List past Mobile Legends: Bang Bang tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running ML:BB tournaments](https://developers.pandascore.co/reference/get_mlbb_tournaments_running.md): List running Mobile Legends: Bang Bang tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming ML:BB tournaments](https://developers.pandascore.co/reference/get_mlbb_tournaments_upcoming.md): List upcoming Mobile Legends: Bang Bang tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get a game](https://developers.pandascore.co/reference/get_ow_games_owgameid.md): Get a single Overwatch game by ID > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List games for a given match](https://developers.pandascore.co/reference/get_ow_matches_matchidorslug_games.md): List games for a given Overwatch match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for OW player on game](https://developers.pandascore.co/reference/get_ow_games_owgameid_players_playeridorslug_stats.md): Get detailed statistics of a given Overwatch given player for the given game > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for OW players on match](https://developers.pandascore.co/reference/get_ow_matches_matchidorslug_players_stats.md): Get detailed statistics of Overwatch players for the given match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for OW player on match](https://developers.pandascore.co/reference/get_ow_matches_matchidorslug_players_playeridorslug_stats.md): Get detailed statistics of a given Overwatch given player for the given match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for OW player](https://developers.pandascore.co/reference/get_ow_players_playeridorslug_stats.md): Get detailed statistics of a given Overwatch player > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for OW player on serie](https://developers.pandascore.co/reference/get_ow_series_serieidorslug_players_playeridorslug_stats.md): Get detailed statistics of a given Overwatch given player for the given serie > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get stats for OW player on tournament](https://developers.pandascore.co/reference/get_ow_tournaments_tournamentidorslug_players_playeridorslug_stats.md): Get detailed statistics of a given Overwatch player for the given tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List heroes](https://developers.pandascore.co/reference/get_ow_heroes.md): List heroes > ℹ️   >  > This endpoint is available to all customers
+- [Get an hero](https://developers.pandascore.co/reference/get_ow_heroes_owheroidorslug.md): Get a single hero by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [Get Overwatch leagues](https://developers.pandascore.co/reference/get_ow_leagues.md): List Overwatch leagues > ℹ️   >  > This endpoint is available to all customers
+- [List maps](https://developers.pandascore.co/reference/get_ow_maps.md): List maps > ℹ️   >  > This endpoint is available to all customers
+- [Get a map](https://developers.pandascore.co/reference/get_ow_maps_owmapidorslug.md): Get a single map by ID or by slug > ℹ️   >  > This endpoint is available to all customers
+- [List Overwatch matches](https://developers.pandascore.co/reference/get_ow_matches.md): List matches for the Overwatch videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Overwatch matches](https://developers.pandascore.co/reference/get_ow_matches_past.md): List past Overwatch matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running Overwatch matches](https://developers.pandascore.co/reference/get_ow_matches_running.md): List running Overwatch matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Overwatch matches](https://developers.pandascore.co/reference/get_ow_matches_upcoming.md): List upcoming Overwatch matches > ℹ️   >  > This endpoint is available to all customers
+- [List Overwatch players](https://developers.pandascore.co/reference/get_ow_players.md): List players for the Overwatch videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Overwatch series](https://developers.pandascore.co/reference/get_ow_series.md): List series for the Overwatch videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Overwatch series](https://developers.pandascore.co/reference/get_ow_series_past.md): List past Overwatch series > ℹ️   >  > This endpoint is available to all customers
+- [Get running Overwatch series](https://developers.pandascore.co/reference/get_ow_series_running.md): List running Overwatch series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Overwatch series](https://developers.pandascore.co/reference/get_ow_series_upcoming.md): List upcoming Overwatch series > ℹ️   >  > This endpoint is available to all customers
+- [List Overwatch teams](https://developers.pandascore.co/reference/get_ow_teams.md): List teams for the Overwatch videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Overwatch tournaments](https://developers.pandascore.co/reference/get_ow_tournaments.md): List tournaments for the Overwatch videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Overwatch tournaments](https://developers.pandascore.co/reference/get_ow_tournaments_past.md): List past Overwatch tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running Overwatch tournaments](https://developers.pandascore.co/reference/get_ow_tournaments_running.md): List running Overwatch tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Overwatch tournaments](https://developers.pandascore.co/reference/get_ow_tournaments_upcoming.md): List upcoming Overwatch tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get PUBG leagues](https://developers.pandascore.co/reference/get_pubg_leagues.md): List PUBG leagues > ℹ️   >  > This endpoint is available to all customers
+- [List PUBG matches](https://developers.pandascore.co/reference/get_pubg_matches.md): List matches for the PUBG videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past PUBG matches](https://developers.pandascore.co/reference/get_pubg_matches_past.md): List past PUBG matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running PUBG matches](https://developers.pandascore.co/reference/get_pubg_matches_running.md): List running PUBG matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming PUBG matches](https://developers.pandascore.co/reference/get_pubg_matches_upcoming.md): List upcoming PUBG matches > ℹ️   >  > This endpoint is available to all customers
+- [List PUBG players](https://developers.pandascore.co/reference/get_pubg_players.md): List players for the PUBG videogame > ℹ️   >  > This endpoint is available to all customers
+- [List PUBG series](https://developers.pandascore.co/reference/get_pubg_series.md): List series for the PUBG videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past PUBG series](https://developers.pandascore.co/reference/get_pubg_series_past.md): List past PUBG series > ℹ️   >  > This endpoint is available to all customers
+- [Get running PUBG series](https://developers.pandascore.co/reference/get_pubg_series_running.md): List running PUBG series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming PUBG series](https://developers.pandascore.co/reference/get_pubg_series_upcoming.md): List upcoming PUBG series > ℹ️   >  > This endpoint is available to all customers
+- [List PUBG teams](https://developers.pandascore.co/reference/get_pubg_teams.md): List teams for the PUBG videogame > ℹ️   >  > This endpoint is available to all customers
+- [List PUBG tournaments](https://developers.pandascore.co/reference/get_pubg_tournaments.md): List tournaments for the PUBG videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past PUBG tournaments](https://developers.pandascore.co/reference/get_pubg_tournaments_past.md): List past PUBG tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running PUBG tournaments](https://developers.pandascore.co/reference/get_pubg_tournaments_running.md): List running PUBG tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming PUBG tournaments](https://developers.pandascore.co/reference/get_pubg_tournaments_upcoming.md): List upcoming PUBG tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get R6siege leagues](https://developers.pandascore.co/reference/get_r6siege_leagues.md): List Rainbow Six Siege leagues > ℹ️   >  > This endpoint is available to all customers
+- [List R6Siege matches](https://developers.pandascore.co/reference/get_r6siege_matches.md): List matches for the Rainbow Six Siege videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past R6siege matches](https://developers.pandascore.co/reference/get_r6siege_matches_past.md): List past Rainbow Six Siege matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running R6siege matches](https://developers.pandascore.co/reference/get_r6siege_matches_running.md): List running Rainbow Six Siege matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming R6siege matches](https://developers.pandascore.co/reference/get_r6siege_matches_upcoming.md): List upcoming Rainbow Six Siege matches > ℹ️   >  > This endpoint is available to all customers
+- [List R6Siege players](https://developers.pandascore.co/reference/get_r6siege_players.md): List players for the Rainbow Six Siege videogame > ℹ️   >  > This endpoint is available to all customers
+- [List R6Siege series](https://developers.pandascore.co/reference/get_r6siege_series.md): List series for the Rainbow Six Siege videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past R6siege series](https://developers.pandascore.co/reference/get_r6siege_series_past.md): List past Rainbow Six Siege series > ℹ️   >  > This endpoint is available to all customers
+- [Get running R6siege series](https://developers.pandascore.co/reference/get_r6siege_series_running.md): List running Rainbow Six Siege series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming R6siege series](https://developers.pandascore.co/reference/get_r6siege_series_upcoming.md): List upcoming Rainbow Six Siege series > ℹ️   >  > This endpoint is available to all customers
+- [List R6Siege teams](https://developers.pandascore.co/reference/get_r6siege_teams.md): List teams for the Rainbow Six Siege videogame > ℹ️   >  > This endpoint is available to all customers
+- [List R6Siege tournaments](https://developers.pandascore.co/reference/get_r6siege_tournaments.md): List tournaments for the Rainbow Six Siege videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past R6Siege tournaments](https://developers.pandascore.co/reference/get_r6siege_tournaments_past.md): List past Rainbow Six Siege tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running R6Siege tournaments](https://developers.pandascore.co/reference/get_r6siege_tournaments_running.md): List running Rainbow Six Siege tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming R6Siege tournaments](https://developers.pandascore.co/reference/get_r6siege_tournaments_upcoming.md): List upcoming Rainbow Six Siege tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get RL leagues](https://developers.pandascore.co/reference/get_rl_leagues.md): List RL leagues > ℹ️   >  > This endpoint is available to all customers
+- [List rl matches](https://developers.pandascore.co/reference/get_rl_matches.md): List matches for the Rocket League videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Rocket League matches](https://developers.pandascore.co/reference/get_rl_matches_past.md): List past Rocket League matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running Rocket League matches](https://developers.pandascore.co/reference/get_rl_matches_running.md): List running Rocket League matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Rocket League matches](https://developers.pandascore.co/reference/get_rl_matches_upcoming.md): List upcoming Rocket League matches > ℹ️   >  > This endpoint is available to all customers
+- [List Rocket League players](https://developers.pandascore.co/reference/get_rl_players.md): List players for the Rocket League videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Rocket League series](https://developers.pandascore.co/reference/get_rl_series.md): List series for the Rocket League videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Rocket League series](https://developers.pandascore.co/reference/get_rl_series_past.md): List past Rocket League series > ℹ️   >  > This endpoint is available to all customers
+- [Get running Rocket League series](https://developers.pandascore.co/reference/get_rl_series_running.md): List running Rocket League series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Rocket League series](https://developers.pandascore.co/reference/get_rl_series_upcoming.md): List upcoming Rocket League series > ℹ️   >  > This endpoint is available to all customers
+- [List Rocket League teams](https://developers.pandascore.co/reference/get_rl_teams.md): List teams for the Rocket League videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Rocket League tournaments](https://developers.pandascore.co/reference/get_rl_tournaments.md): List tournaments for the Rocket League videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Rocket League tournaments](https://developers.pandascore.co/reference/get_rl_tournaments_past.md): List past Rocket League tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running Rocket League tournaments](https://developers.pandascore.co/reference/get_rl_tournaments_running.md): List running Rocket League tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Rocket League tournaments](https://developers.pandascore.co/reference/get_rl_tournaments_upcoming.md): List upcoming Rocket League tournaments > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant abilities](https://developers.pandascore.co/reference/get_valorant_abilities.md): List abilities > ℹ️   >  > This endpoint is available to all customers
+- [Get a Valorant ability by its ID](https://developers.pandascore.co/reference/get_valorant_abilities_valorantabilityid.md): Get a Valorant ability by its ID > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant agents](https://developers.pandascore.co/reference/get_valorant_agents.md): List agents > ℹ️   >  > This endpoint is available to all customers
+- [Get a Valorant agent by its ID](https://developers.pandascore.co/reference/get_valorant_agents_valorantagentid.md): Get a Valorant agent by its ID > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant agents for all versions](https://developers.pandascore.co/reference/get_valorant_versions_all_agents.md): Deprecated. Equivalent route: [/valorant/agents?filter[videogame_version]=all](/reference/get_valorant_agents) > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant agents for a specific version](https://developers.pandascore.co/reference/get_valorant_versions_valorantversionname_agents.md): Deprecated. Equivalent route: [/valorant/agents?filter[videogame_version]={valorant_version_name}](/reference/get_valorant_agents) > ℹ️   >  > This endpoint is available to all customers
+- [Get a game](https://developers.pandascore.co/reference/get_valorant_games_valorantgameid.md): Get a single Valorant game by ID > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List Play-by-Play events for a given game](https://developers.pandascore.co/reference/get_valorant_games_valorantgameid_events.md): List events for a given Valorant game > ℹ️   >  > This endpoint is only available to customers with the **pro** historical plan
+- [List rounds in a Valorant game](https://developers.pandascore.co/reference/get_valorant_games_valorantgameid_rounds.md): List rounds in a Valorant game > ℹ️   >  > This endpoint is only available to customers with the **pro** historical plan
+- [List games for a given match](https://developers.pandascore.co/reference/get_valorant_matches_matchidorslug_games.md): List games for a given Valorant match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get Valorant leagues](https://developers.pandascore.co/reference/get_valorant_leagues.md): List Valorant leagues > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant maps](https://developers.pandascore.co/reference/get_valorant_maps.md): List maps > ℹ️   >  > This endpoint is available to all customers
+- [Get a Valorant map by its ID](https://developers.pandascore.co/reference/get_valorant_maps_valorantmapid.md): Get a Valorant map by its ID > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant maps for all versions](https://developers.pandascore.co/reference/get_valorant_versions_all_maps.md): Deprecated. Equivalent route: [/valorant/maps?filter[videogame_version]=all](/reference/get_valorant_maps) > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant maps for a specific version](https://developers.pandascore.co/reference/get_valorant_versions_valorantversionname_maps.md): Deprecated. Equivalent route: [/valorant/maps?filter[videogame_version]={valorant_version_name}](/reference/get_valorant_maps) > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant matches](https://developers.pandascore.co/reference/get_valorant_matches.md): List matches for the Valorant videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Valorant matches](https://developers.pandascore.co/reference/get_valorant_matches_past.md): List past Valorant matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running Valorant matches](https://developers.pandascore.co/reference/get_valorant_matches_running.md): List running Valorant matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Valorant matches](https://developers.pandascore.co/reference/get_valorant_matches_upcoming.md): List upcoming Valorant matches > ℹ️   >  > This endpoint is available to all customers
+- [Get players stats for a Valorant match](https://developers.pandascore.co/reference/get_valorant_matches_matchidorslug_players_stats.md): Get the aggregated statistics for all players in a Valorant match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get team stats for a Valorant match](https://developers.pandascore.co/reference/get_valorant_matches_matchidorslug_teams_teamidorslug_stats.md): Get the aggregated team statistics for a Valorant match > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get a Valorant player stats](https://developers.pandascore.co/reference/get_valorant_players_playeridorslug_stats.md): Get a Valorant player stats by ID or slug > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get player stats for a Valorant series](https://developers.pandascore.co/reference/get_valorant_series_serieidorslug_players_playeridorslug_stats.md): Get the aggregated player statistics for a Valorant series > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get team stats for a Valorant series](https://developers.pandascore.co/reference/get_valorant_series_serieidorslug_teams_teamidorslug_stats.md): Get the aggregated team statistics for a Valorant series > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get a Valorant team stats](https://developers.pandascore.co/reference/get_valorant_teams_teamidorslug_stats.md): Get a Valorant team stats by ID or slug > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get player stats for a Valorant tournament](https://developers.pandascore.co/reference/get_valorant_tournaments_tournamentidorslug_players_playeridorslug_stats.md): Get the aggregated player statistics for a Valorant tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [Get team stats for a Valorant tournament](https://developers.pandascore.co/reference/get_valorant_tournaments_tournamentidorslug_teams_teamidorslug_stats.md): Get the aggregated team statistics for a Valorant tournament > ℹ️   >  > This endpoint is only available to customers with a historical or real-time data plan
+- [List Valorant players](https://developers.pandascore.co/reference/get_valorant_players.md): List players for the Valorant videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant series](https://developers.pandascore.co/reference/get_valorant_series.md): List series for the Valorant videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Valorant series](https://developers.pandascore.co/reference/get_valorant_series_past.md): List past Valorant series > ℹ️   >  > This endpoint is available to all customers
+- [Get running Valorant series](https://developers.pandascore.co/reference/get_valorant_series_running.md): List running Valorant series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Valorant series](https://developers.pandascore.co/reference/get_valorant_series_upcoming.md): List upcoming Valorant series > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant teams](https://developers.pandascore.co/reference/get_valorant_teams.md): List teams for the Valorant videogame > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant tournaments](https://developers.pandascore.co/reference/get_valorant_tournaments.md): List tournaments for the Valorant videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past Valorant tournaments](https://developers.pandascore.co/reference/get_valorant_tournaments_past.md): List past Valorant tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running Valorant tournaments](https://developers.pandascore.co/reference/get_valorant_tournaments_running.md): List running Valorant tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming Valorant tournaments](https://developers.pandascore.co/reference/get_valorant_tournaments_upcoming.md): List upcoming Valorant tournaments > ℹ️   >  > This endpoint is available to all customers
+- [List Valorant weapons](https://developers.pandascore.co/reference/get_valorant_weapons.md): List weapons > ℹ️   >  > This endpoint is available to all customers
+- [Get a Valorant weapon by its ID](https://developers.pandascore.co/reference/get_valorant_weapons_valorantweaponid.md): Get a Valorant weapon by its ID > ℹ️   >  > This endpoint is available to all customers
+- [Get King of Glory leagues](https://developers.pandascore.co/reference/get_kog_leagues-1.md): List King of Glory leagues > ℹ️   >  > This endpoint is available to all customers
+- [List King of Glory matches](https://developers.pandascore.co/reference/get_kog_matches-1.md): List matches for the King of Glory videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past King of Glory matches](https://developers.pandascore.co/reference/get_kog_matches_past-1.md): List past King of Glory matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running King of Glory matches](https://developers.pandascore.co/reference/get_kog_matches_running-1.md): List running King of Glory matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming King of Glory matches](https://developers.pandascore.co/reference/get_kog_matches_upcoming-1.md): List upcoming King of Glory matches > ℹ️   >  > This endpoint is available to all customers
+- [List King of Glory players](https://developers.pandascore.co/reference/get_kog_players-1.md): List players for the King of Glory videogame > ℹ️   >  > This endpoint is available to all customers
+- [List King of Glory series](https://developers.pandascore.co/reference/get_kog_series-1.md): List series for the King of Glory videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past King of Glory series](https://developers.pandascore.co/reference/get_kog_series_past-1.md): List past King of Glory series > ℹ️   >  > This endpoint is available to all customers
+- [Get running King of Glory series](https://developers.pandascore.co/reference/get_kog_series_running-1.md): List running King of Glory series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming King of Glory series](https://developers.pandascore.co/reference/get_kog_series_upcoming-1.md): List upcoming King of Glory series > ℹ️   >  > This endpoint is available to all customers
+- [List King of Glory teams](https://developers.pandascore.co/reference/get_kog_teams-1.md): List teams for the King of Glory videogame > ℹ️   >  > This endpoint is available to all customers
+- [List King of Glory tournaments](https://developers.pandascore.co/reference/get_kog_tournaments-1.md): List tournaments for the King of Glory videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past King of Glory tournaments](https://developers.pandascore.co/reference/get_kog_tournaments_past-1.md): List past King of Glory tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running King of Glory tournaments](https://developers.pandascore.co/reference/get_kog_tournaments_running-1.md): List running King of Glory tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming King of Glory tournaments](https://developers.pandascore.co/reference/get_kog_tournaments_upcoming-1.md): List upcoming King of Glory tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get StarCraft 2 leagues](https://developers.pandascore.co/reference/get_starcraft-2_leagues.md): List StarCraft 2 leagues > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft 2 matches](https://developers.pandascore.co/reference/get_starcraft-2_matches.md): List matches for the StarCraft 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past StarCraft 2 matches](https://developers.pandascore.co/reference/get_starcraft-2_matches_past.md): List past StarCraft 2 matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running StarCraft 2 matches](https://developers.pandascore.co/reference/get_starcraft-2_matches_running.md): List running StarCraft 2 matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming StarCraft 2 matches](https://developers.pandascore.co/reference/get_starcraft-2_matches_upcoming.md): List upcoming StarCraft 2 matches > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft 2 players](https://developers.pandascore.co/reference/get_starcraft-2_players.md): List players for the StarCraft 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft 2 series](https://developers.pandascore.co/reference/get_starcraft-2_series.md): List series for the  StarCraft 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past StarCraft 2 series](https://developers.pandascore.co/reference/get_starcraft-2_series_past.md): List past StarCraft 2 series > ℹ️   >  > This endpoint is available to all customers
+- [Get running StarCraft 2 series](https://developers.pandascore.co/reference/get_starcraft-2_series_running.md): List running StarCraft 2 series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming StarCraft 2 series](https://developers.pandascore.co/reference/get_starcraft-2_series_upcoming.md): List upcoming StarCraft 2 series > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft 2 teams](https://developers.pandascore.co/reference/get_starcraft-2_teams.md): List teams for the StarCraft 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft 2 tournaments](https://developers.pandascore.co/reference/get_starcraft-2_tournaments.md): List tournaments for the StarCraft 2 videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past StarCraft 2 tournaments](https://developers.pandascore.co/reference/get_starcraft-2_tournaments_past.md): List past StarCraft 2 tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running StarCraft 2 tournaments](https://developers.pandascore.co/reference/get_starcraft-2_tournaments_running.md): List running StarCraft 2 tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming StarCraft 2 tournaments](https://developers.pandascore.co/reference/get_starcraft-2_tournaments_upcoming.md): List upcoming StarCraft 2 tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get StarCraft Brood War leagues](https://developers.pandascore.co/reference/get_starcraft-brood-war_leagues.md): List StarCraft Brood War leagues > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft Brood War matches](https://developers.pandascore.co/reference/get_starcraft-brood-war_matches.md): List matches for the StarCraft Brood War videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past StarCraft Brood War matches](https://developers.pandascore.co/reference/get_starcraft-brood-war_matches_past.md): List past StarCraft Brood War matches > ℹ️   >  > This endpoint is available to all customers
+- [Get running StarCraft Brood War matches](https://developers.pandascore.co/reference/get_starcraft-brood-war_matches_running.md): List running StarCraft Brood War matches > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming StarCraft Brood War matches](https://developers.pandascore.co/reference/get_starcraft-brood-war_matches_upcoming.md): List upcoming StarCraft Brood War matches > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft Brood War players](https://developers.pandascore.co/reference/get_starcraft-brood-war_players.md): List players for the StarCraft Brood War videogame > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft Brood War series](https://developers.pandascore.co/reference/get_starcraft-brood-war_series.md): List series for the StarCraft Brood War videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past StarCraft Brood War series](https://developers.pandascore.co/reference/get_starcraft-brood-war_series_past.md): List past StarCraft Brood War series > ℹ️   >  > This endpoint is available to all customers
+- [Get running StarCraft Brood War series](https://developers.pandascore.co/reference/get_starcraft-brood-war_series_running.md): List running StarCraft Brood War series > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming StarCraft Brood War series](https://developers.pandascore.co/reference/get_starcraft-brood-war_series_upcoming.md): List upcoming StarCraft Brood War series > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft Brood War teams](https://developers.pandascore.co/reference/get_starcraft-brood-war_teams.md): List teams for the StarCraft Brood War videogame > ℹ️   >  > This endpoint is available to all customers
+- [List StarCraft Brood War tournaments](https://developers.pandascore.co/reference/get_starcraft-brood-war_tournaments.md): List tournaments for the StarCraft Brood War videogame > ℹ️   >  > This endpoint is available to all customers
+- [Get past StarCraft Brood War tournaments](https://developers.pandascore.co/reference/get_starcraft-brood-war_tournaments_past.md): List past StarCraft Brood War tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get running StarCraft Brood War tournaments](https://developers.pandascore.co/reference/get_starcraft-brood-war_tournaments_running.md): List running StarCraft Brood War tournaments > ℹ️   >  > This endpoint is available to all customers
+- [Get upcoming StarCraft Brood War tournaments](https://developers.pandascore.co/reference/get_starcraft-brood-war_tournaments_upcoming.md): List upcoming StarCraft Brood War tournaments > ℹ️   >  > This endpoint is available to all customers
+
+## Recipes
+- [Discord Match Score-Bot](https://developers.pandascore.co/recipes/discord-match-score-bot.md)
+- [Handling WebSockets disconnections](https://developers.pandascore.co/recipes/handling-websockets-disconnections.md)
+- [Mapping tournament brackets as a binary tree](https://developers.pandascore.co/recipes/mapping-tournament-brackets-as-a-binary-tree.md)
+- [Tracking changes with incidents](https://developers.pandascore.co/recipes/tracking-changes-with-incidents.md)
+
+## Pages
+- [Custom Page](https://developers.pandascore.co/page/custom-page.md)
+
+## Changelog
+- [2.64.6](https://developers.pandascore.co/changelog/2646.md)
+- [2.62.3](https://developers.pandascore.co/changelog/2623.md)
+- [2.62.2](https://developers.pandascore.co/changelog/2622.md)
+- [2.62.0](https://developers.pandascore.co/changelog/2620.md)
+- [2.61.0](https://developers.pandascore.co/changelog/2610.md)
+- [2.59.0](https://developers.pandascore.co/changelog/2590.md)
+- [2.58.0](https://developers.pandascore.co/changelog/2580.md)
+- [2.57.0](https://developers.pandascore.co/changelog/2570.md)
+- [2.55.0](https://developers.pandascore.co/changelog/2550.md)
+- [API sandbox environment](https://developers.pandascore.co/changelog/live-api-sandbox-environment.md)
