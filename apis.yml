@@ -94,6 +94,12 @@ apis:
   - WebSocket
   - Streaming
   - Frames
+  - Event
+  tags_raw:
+  - Live Data
+  - WebSocket
+  - Streaming
+  - Frames
   - Events
   properties:
   - type: Documentation
@@ -195,6 +201,8 @@ apis:
   humanURL: https://developers.pandascore.co/docs
   baseURL: https://api.pandascore.co
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
