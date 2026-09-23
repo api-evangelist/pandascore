@@ -1,17 +1,7 @@
 {
   "provider": "pandascore",
   "sources": [
-    "pandascore-changes-api-openapi.yml",
-    "pandascore-game-cs-go-api-openapi.yml",
-    "pandascore-game-dota-2-api-openapi.yml",
-    "pandascore-game-league-of-legends-api-openapi.yml",
-    "pandascore-game-valorant-api-openapi.yml",
-    "pandascore-leagues-api-openapi.yml",
-    "pandascore-matches-api-openapi.yml",
-    "pandascore-players-api-openapi.yml",
-    "pandascore-series-api-openapi.yml",
-    "pandascore-teams-api-openapi.yml",
-    "pandascore-tournaments-api-openapi.yml"
+    "_original/pandascore-openapi.yml"
   ],
   "outputs": [
     "pandascore-changes-api-openapi.yml",
@@ -29,6 +19,22 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "pandascore-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "pandascore-changes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-game-cs-go-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-game-dota-2-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-game-league-of-legends-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-game-valorant-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-leagues-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-matches-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-players-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-series-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-teams-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pandascore-tournaments-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

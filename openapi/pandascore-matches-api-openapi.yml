@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: PandaScore Changes Matches API
+  title: PandaScore Matches API
   description: PandaScore provides esports data via a REST API covering matches, leagues, tournaments, teams, players, series and game-specific endpoints for titles like League of Legends, CS:GO, Valorant, and Dota 2. Authentication is via a Bearer token.
   version: 1.0.0
   contact:
@@ -70,6 +70,13 @@ paths:
           description: A match
 components:
   parameters:
+    Page:
+      in: query
+      name: page
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
     PerPage:
       in: query
       name: per_page
@@ -78,13 +85,6 @@ components:
         minimum: 1
         maximum: 100
         default: 50
-    Page:
-      in: query
-      name: page
-      schema:
-        type: integer
-        minimum: 1
-        default: 1
   securitySchemes:
     bearerAuth:
       type: http
