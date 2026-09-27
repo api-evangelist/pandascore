@@ -70,13 +70,6 @@ paths:
           description: A match
 components:
   parameters:
-    Page:
-      in: query
-      name: page
-      schema:
-        type: integer
-        minimum: 1
-        default: 1
     PerPage:
       in: query
       name: per_page
@@ -85,6 +78,13 @@ components:
         minimum: 1
         maximum: 100
         default: 50
+    Page:
+      in: query
+      name: page
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
   securitySchemes:
     bearerAuth:
       type: http
