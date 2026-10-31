@@ -1,4 +1,4 @@
-# PandaScore (pandascore)
+# PandaScore
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,109 +66,140 @@
 
 PandaScore is a Paris-based esports data and odds provider supplying real-time fixtures, live statistics, historical data, and betting markets across 13+ esports titles including League of Legends, Counter-Strike 2, Dota 2, Valorant, Rainbow Six Siege, Overwatch, Call of Duty, Rocket League, EA Sports FC, King of Glory, Wild Rift, StarCraft, and Mobile Legends Bang Bang. The PandaScore REST API at api.pandascore.co plus WebSocket feeds power fantasy platforms, media outlets, predictive analytics, live score apps, and regulated sportsbooks.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/apis.yml)
+**Areas:** Esports · Odds · Betting · Live Data · Stats · Fantasy · WebSocket · REST
 
-## Tags
+## PandaScore on APIs.io
 
-- Esports
-- Odds
-- Betting
-- Live Data
-- Stats
-- Fantasy
-- WebSocket
-- REST
+Everything profiled for PandaScore is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pandascore/](https://apis.io/providers/pandascore/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (14)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+- [PandaScore REST API](https://apis.io/apis/pandascore/rest-api/) — Unified REST API for esports fixtures, matches, tournaments, leagues, series, teams, players, and historical statistics across all supported videogames.…
+- [PandaScore Odds API](https://apis.io/apis/pandascore/odds-api/) — Esports betting odds and markets including pre-match and live odds, player props, BetBuilder, and Kill Maker markets across 308+ unique markets for…
+- [PandaScore Live Data API](https://apis.io/apis/pandascore/live-data-api/) — Real-time in-game state, frames, and event timelines streamed over WebSocket for supported esports titles. Used for live score apps, live trading, and…
+- [PandaScore Changes API](https://apis.io/apis/pandascore/pandascore-changes-api/) — The Changes API from PandaScore — 3 operation(s) for changes.
+- [PandaScore Game - CS:GO API](https://apis.io/apis/pandascore/pandascore-game-cs-go-api/) — The Game - CS:GO API from PandaScore — 1 operation(s) for game - cs:go.
+- [PandaScore Game - Dota 2 API](https://apis.io/apis/pandascore/pandascore-game-dota-2-api/) — The Game - Dota 2 API from PandaScore — 1 operation(s) for game - dota 2.
+- [PandaScore Game - League of Legends API](https://apis.io/apis/pandascore/pandascore-game-league-of-legends-api/) — The Game - League of Legends API from PandaScore — 1 operation(s) for game - league of legends.
+- [PandaScore Game - Valorant API](https://apis.io/apis/pandascore/pandascore-game-valorant-api/) — The Game - Valorant API from PandaScore — 1 operation(s) for game - valorant.
+- [PandaScore Leagues API](https://apis.io/apis/pandascore/pandascore-leagues-api/) — The Leagues API from PandaScore — 2 operation(s) for leagues.
+- [PandaScore Matches API](https://apis.io/apis/pandascore/pandascore-matches-api/) — The Matches API from PandaScore — 5 operation(s) for matches.
+- [PandaScore Players API](https://apis.io/apis/pandascore/pandascore-players-api/) — The Players API from PandaScore — 1 operation(s) for players.
+- [PandaScore Series API](https://apis.io/apis/pandascore/pandascore-series-api/) — The Series API from PandaScore — 1 operation(s) for series.
+- [PandaScore Teams API](https://apis.io/apis/pandascore/pandascore-teams-api/) — The Teams API from PandaScore — 1 operation(s) for teams.
+- [PandaScore Tournaments API](https://apis.io/apis/pandascore/pandascore-tournaments-api/) — The Tournaments API from PandaScore — 2 operation(s) for tournaments.
 
-## APIs
+### Published properties
 
-### PandaScore REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Unified REST API for esports fixtures, matches, tournaments, leagues, series, teams, players, and historical statistics across all supported videogames. Bearer-token authenticated, paginated, and game-scoped via title-specific routes plus a common /matches surface.
+#### Agentic access (1)
 
-- **Human URL:** [https://developers.pandascore.co/docs](https://developers.pandascore.co/docs)
-- **Base URL:** `https://api.pandascore.co`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Pandascore Agentic Access](https://apis.io/agentic-access/pandascore/pandascore-agentic-access/)
 
-- Esports
-- Fixtures
-- Matches
-- Tournaments
-- Stats
-- REST
+#### Collections (12)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://developers.pandascore.co/docs)
-- [API Reference](https://developers.pandascore.co/reference)
-- [L L Ms Txt](https://developers.pandascore.co/llms.txt)
-- [Authentication](https://developers.pandascore.co/docs/authentication)
-- [Sign Up](https://app.pandascore.co/signup)
-- [Postman Collection](collections/pandascore.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/pandascore.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [PandaScore API](https://apis.io/collections/pandascore/open-pandascore/)
+- [PandaScore Changes API](https://apis.io/collections/pandascore/open-pandascore-changes-api/)
+- [PandaScore Changes Game - CS:GO API](https://apis.io/collections/pandascore/open-pandascore-game-cs-go-api/)
+- [PandaScore Changes Game - Dota 2 API](https://apis.io/collections/pandascore/open-pandascore-game-dota-2-api/)
+- [PandaScore Changes Game - League of Legends API](https://apis.io/collections/pandascore/open-pandascore-game-league-of-legends-api/)
+- [PandaScore Changes Game - Valorant API](https://apis.io/collections/pandascore/open-pandascore-game-valorant-api/)
+- [PandaScore Changes Leagues API](https://apis.io/collections/pandascore/open-pandascore-leagues-api/)
+- [PandaScore Changes Matches API](https://apis.io/collections/pandascore/open-pandascore-matches-api/)
+- [PandaScore Changes Players API](https://apis.io/collections/pandascore/open-pandascore-players-api/)
+- [PandaScore Changes Series API](https://apis.io/collections/pandascore/open-pandascore-series-api/)
+- [PandaScore Changes Teams API](https://apis.io/collections/pandascore/open-pandascore-teams-api/)
+- [PandaScore Changes Tournaments API](https://apis.io/collections/pandascore/open-pandascore-tournaments-api/)
 
-### PandaScore Odds API
+#### Security (2)
 
-Esports betting odds and markets including pre-match and live odds, player props, BetBuilder, and Kill Maker markets across 308+ unique markets for supported titles. Delivered through the same REST surface and trading-team backed.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://pandascore.co/odds](https://pandascore.co/odds)
-- **Base URL:** `https://api.pandascore.co`
+- [Pandascore Authentication](https://apis.io/security/pandascore/pandascore-authentication/)
+- [Pandascore Domain Security](https://apis.io/security/pandascore/pandascore-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- Odds
-- Betting
-- Markets
-- Sportsbook
+Published plans, tiers and prices.
 
-#### Properties
+- [Pandascore Plans Pricing](https://apis.io/plans/pandascore/pandascore-plans-pricing/)
 
-- [Documentation](https://developers.pandascore.co/docs)
-- [Product Page](https://pandascore.co/odds)
-- [Postman Collection](collections/pandascore.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/pandascore.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-### PandaScore Live Data API
+Published request limits.
 
-Real-time in-game state, frames, and event timelines streamed over WebSocket for supported esports titles. Used for live score apps, live trading, and second-screen experiences.
+- [Pandascore Rate Limits](https://apis.io/rate-limits/pandascore/pandascore-rate-limits/)
 
-- **Human URL:** [https://developers.pandascore.co/docs/live-data](https://developers.pandascore.co/docs/live-data)
-- **Base URL:** `https://api.pandascore.co`
+#### FinOps (1)
 
-#### Tags
+What the API costs to run, by operation.
 
-- Live Data
-- WebSocket
-- Streaming
-- Frames
-- Events
+- [Pandascore Finops](https://apis.io/finops/pandascore/pandascore-finops/)
 
-#### Properties
+## Where to find this API
 
-- [Documentation](https://developers.pandascore.co/docs/live-data)
-- [Web Socket](wss://live.pandascore.co)
-- [Postman Collection](collections/pandascore.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/pandascore.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://pandascore.co/)
-- [Portal](https://app.pandascore.co/dashboard/main)
 - [Documentation](https://developers.pandascore.co/docs)
-- [Sign Up](https://app.pandascore.co/signup)
 - [Blog](https://pandascore.co/blog)
-- [LinkedIn](https://www.linkedin.com/company/pandascore)
-- [Careers](https://www.welcometothejungle.com/fr/companies/pandascore)
-- [Terms of Service](https://pandascore.co/terms-and-condition)
-- [Privacy Policy](https://pandascore.co/privacy)
-- [Contact](mailto:sales@pandascore.co)
+- [Terms of service](https://pandascore.co/terms-and-condition)
+- [Privacy policy](https://pandascore.co/privacy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 33.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 39.5 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pandascore/](https://apis.io/providers/pandascore/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PandaScore: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pandascore/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
